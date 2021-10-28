@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styles for the advice api component */
+
+.wrapper {
+  padding-top: 150px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.advice {
+  text-decoration: solid;
+  font-size: 40px;
+  background-color: rgb(142, 142, 226);
+  padding: 50px;
+  border-radius: 100%;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+  filter: drop-shadow(0px 10px 4px black);
+  -webkit-text-stroke: 0.5px black;
+  -webkit-text-fill-color: white;
+}
