@@ -2,7 +2,7 @@ import './App.css';
 import { Fragment } from 'react/cjs/react.production.min';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import AdviceApi from './components/AdviceApi';
-
+import CvsTest from './components/CvsTest';
 
 function App() {
   return (
@@ -12,17 +12,16 @@ function App() {
           <div>
             <h1>Testing</h1>
             <ul>
-            <li>
-            <Route path='/adviceapi' component={AdviceApi}/>
-            <Link to="/adviceapi">Advice Api</Link> 
-
-            </li>
-          </ul>
+              <li>
+                <Route path='/adviceapi' component={AdviceApi} />
+                <Link to='/adviceapi'>Advice Api</Link>
+              </li>
+              <li>
+                <Route path='/cvs' component={CvsTest} />
+                <Link to='/cvs'>CVS Test</Link>
+              </li>
+            </ul>
           </div>
-          
-          
-          
-          
         </Switch>
       </BrowserRouter>
     </Fragment>
