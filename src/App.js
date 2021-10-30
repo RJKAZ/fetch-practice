@@ -3,6 +3,7 @@ import { Fragment } from 'react/cjs/react.production.min';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import AdviceApi from './components/AdviceApi';
 import CvsTest from './components/CvsTest';
+import Photos from './components/Photos';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
               <li>
                 <Route path='/cvs' component={CvsTest} />
                 <Link to='/cvs'>CVS Test</Link>
+              </li>
+              <li>
+                <Route path='/photo' component={Photos} />
+                <Link to='/photo'>Photos</Link>
               </li>
             </ul>
           </div>
