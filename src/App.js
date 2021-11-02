@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import AdviceApi from './components/AdviceApi';
 import CvsTest from './components/CvsTest';
 import Photos from './components/Photos';
+import Planets from './components/Planets';
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
               <li>
                 <Route path='/photo' component={Photos} />
                 <Link to='/photo'>Photos</Link>
+              </li>
+              <li>
+                <Route path='/planets' component={Planets} />
+                <Link to='/planets'>Planets</Link>
               </li>
             </ul>
           </div>
