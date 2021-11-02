@@ -5,6 +5,8 @@ import AdviceApi from './components/AdviceApi';
 import CvsTest from './components/CvsTest';
 import Photos from './components/Photos';
 import Planets from './components/Planets';
+import Random from './components/Random';
+import Activity from './components/Activity';
 
 function App() {
   return (
@@ -29,6 +31,14 @@ function App() {
               <li>
                 <Route path='/planets' component={Planets} />
                 <Link to='/planets'>Planets</Link>
+              </li>
+              <li>
+                <Route path='/placeholder' component={Random} />
+                <Link to='/placeholder'>Random</Link>
+              </li>
+              <li>
+                <Route path='/activity' component={Activity} />
+                <Link to='/activity'>Activity</Link>
               </li>
             </ul>
           </div>
