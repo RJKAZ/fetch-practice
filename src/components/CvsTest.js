@@ -1,36 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CvsTest() {
-  // defining the state
+  const [data, setData] = useState([]);
 
-  const [user, userList] = useState('');
-
-  // define the hook inside the component which I imported at the top.
-  useEffect(() => {
-    // defining the api url as a variable with the useEffect hook
-    const url = 'https://jsonplaceholder.typicode.com/users';
-
-    // now making my Asyncronous fetch request
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url);
-        const json = await response.json();
+  const apiGet = () => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => response.json())
+      .then((json) => {
         console.log(json);
-        userList(json.name.user);
-      } catch (error) {
-        console.log('error', error);
-      }
-    };
-    fetchData();
+        setData(json);
+      });
+  };
+
+  useEffect(() => {
+    apiGet();
   }, []);
 
   return (
     <div>
-      <h1>
-        This where I will attempt the CVS test and do it enough times that I
-        will never fail this test again...if I'm ever asked it anyway
-      </h1>
-      <p>{user}</p>
+      <h1>API Practice for the CVS Test</h1>
+      <button onClick={apiGet}> Lets Fetch The API</button>
+
+      <div>
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>
+              {item.id}, {item.email}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
