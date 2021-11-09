@@ -7,7 +7,7 @@ import Photos from './components/Photos';
 import Planets from './components/Planets';
 import Random from './components/Random';
 import Activity from './components/Activity';
-import DisneyApi from './components/DisneyApi';
+import Dog from './components/Dog';
 
 function App() {
   return (
@@ -42,8 +42,8 @@ function App() {
                 <Link to='/activity'>Activity</Link>
               </li>
               <li>
-                <Route path='/disney' component={DisneyApi} />
-                <Link to='/disney'>Disney</Link>
+                <Route path='/dog' component={Dog} />
+                <Link to='/dog'>Dog</Link>
               </li>
             </ul>
           </div>
